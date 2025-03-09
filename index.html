@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eaglerXhub</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* YouTube Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container iframe {
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.78vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        /* Smaller Gray Box */
+        .gray-box {
+            position: relative;
+            width: 70%; /* Reduced width */
+            max-width: 700px; /* Max width */
+            height: 400px; /* Reduced height */
+            background: gray;
+            border-radius: 25px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 60px;
+            height: 100%;
+            background: #2c2f36;
+            padding-top: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: width 0.3s ease;
+            z-index: 1;
+            text-align: center;
+        }
+
+        /* Sidebar Logo */
+        .sidebar-logo {
+            width: 30px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            white-space: nowrap;
+            visibility: hidden;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .sidebar:hover {
+            width: 250px;
+        }
+
+        .sidebar:hover a {
+            font-size: 20px;
+            visibility: visible;
+        }
+
+        /* Adjusted Main Content to Avoid Overlapping with Sidebar */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            padding-left: 80px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- YouTube Video Background -->
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/bD-BETP2sis?autoplay=1&mute=1&loop=1&playlist=bD-BETP2sis&controls=0&showinfo=0&modestbranding=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Smaller Gray Box with Sidebar -->
+    <div class="gray-box">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <img src="logo.png" alt="Logo" class="sidebar-logo">
+            <a href="index.html">Home</a>
+            <a href="clients.html">Clients</a>
+            <a href="ourclients.html">Our Clients</a>
+            <a href="credits.html">Credits</a>
+            <a href="settings.html">Settings</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>EaglerXhub</h1>
+            <p>Eaglercraft is real Minecraft 1.5.2 that you can play in any regular place, not just in the browser. That includes schools, workplaces, and even churches.</p>
+        </div>
+    </div>
+
+</body>
+</html>
